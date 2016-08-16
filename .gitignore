@@ -30,3 +30,10 @@ local.properties
 .classpath
 .settings/
 .loadpath
+
+
+
+
+# Para proyectos con nodeJS
+
+ProyectoNode/node_modules/*
