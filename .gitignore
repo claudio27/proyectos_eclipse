@@ -16,7 +16,7 @@ hs_err_pid*
 
 *.TMP
 *.pydevproject
-.project
+#.project			### Recrear proyecto
 .metadata
 .recommenders
 bin/**
@@ -27,12 +27,16 @@ tmp/**/*
 *.swp
 *~.nib
 local.properties
-.classpath
-.settings/
+#.classpath		### Recrear proyecto
+#.settings/		### Recrear proyecto
 .loadpath
 
 
 
+# Carpetas que no deseo subir
+
+/Servers/
+/target/
 
 # Para proyectos con nodeJS
 
