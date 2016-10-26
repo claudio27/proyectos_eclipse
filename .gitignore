@@ -32,9 +32,9 @@ local.properties
 .loadpath
 
 *.lst
-*.*
 !*.java
 !*.py
+
 
 
 # Carpetas que no deseo subir
@@ -49,3 +49,7 @@ ProyectoNode/node_modules/*
 
 
 
+**/.classpath
+**/.gitignore
+**/.project
+**/.settings/*

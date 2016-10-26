@@ -1,0 +1,1 @@
+console.log('Escribiendo en el log desde archivo externo');
