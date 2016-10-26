@@ -27,10 +27,14 @@ tmp/**/*
 *.swp
 *~.nib
 local.properties
-#.classpath		### Recrear proyecto
-#.settings/		### Recrear proyecto
+.classpath		
+.settings/*		
 .loadpath
 
+*.lst
+*.*
+!*.java
+!*.py
 
 
 # Carpetas que no deseo subir
@@ -41,3 +45,7 @@ local.properties
 # Para proyectos con nodeJS
 
 ProyectoNode/node_modules/*
+/PruebasGit/
+
+
+
