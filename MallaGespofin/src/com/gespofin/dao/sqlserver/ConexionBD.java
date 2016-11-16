@@ -44,7 +44,12 @@ public class ConexionBD {
 	}
 	
 	public void desconectar() {
-		this.con = null;
+		try {
+			this.con.close();
+		} catch (SQLException e) {
+			System.err.println("Fallo la desconexion de la bd");
+			e.printStackTrace();
+		}
 	}
 	
 	
