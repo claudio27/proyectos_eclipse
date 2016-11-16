@@ -1,0 +1,20 @@
+	Configuracion de la base de datos
+	=================================
+
+Los atributos de la base de datos, como servidor_base_de_datos,
+nombre_base_de_datos, usuario y contraseña, pueden ser 
+configurados en el archivo properties/config.properties
+
+
+
+actualizaCif() 						: -jar D:\bice\jarsWorkload\DAP\ftphome\ETL\DAP\procesos\Mallagespofin.jar 1
+cargaArchivo(String nombreArchivo) 	: -jar D:\bice\jarsWorkload\DAP\ftphome\ETL\DAP\procesos\Mallagespofin.jar 2 ()
+cargaLetrasyBonos() 				: -jar D:\bice\jarsWorkload\DAP\ftphome\ETL\DAP\procesos\Mallagespofin.jar 3
+copiaArchivosFilialInicioDia() 		: -jar D:\bice\jarsWorkload\DAP\ftphome\ETL\DAP\procesos\Mallagespofin.jar 4
+copiaArchivosFilialInicioDiaAGV() 	: -jar D:\bice\jarsWorkload\DAP\ftphome\ETL\DAP\procesos\Mallagespofin.jar 5
+correoInicioProcesoInicioDia() 		: -jar D:\bice\jarsWorkload\DAP\ftphome\ETL\DAP\procesos\Mallagespofin.jar 6
+creaConversores() 					: -jar D:\bice\jarsWorkload\DAP\ftphome\ETL\DAP\procesos\Mallagespofin.jar 7
+creaParaFecInicioDia() 				: -jar D:\bice\jarsWorkload\DAP\ftphome\ETL\DAP\procesos\Mallagespofin.jar 8
+descargaPatrimonioEfectivo() 		: -jar D:\bice\jarsWorkload\DAP\ftphome\ETL\DAP\procesos\Mallagespofin.jar 9
+
+

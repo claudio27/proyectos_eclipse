@@ -50,6 +50,7 @@ public class DescargaArchivos extends HttpServlet {
 	private String dbPass = "GRT_EXP";
 	
 	
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
