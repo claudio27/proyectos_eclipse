@@ -26,7 +26,9 @@ public class DaoImpSqlServer implements Dao {
 			
 			if(rs.next()) {
 				res.setResultado(rs.getInt(1));
+				res.setMensaje(rs.getString("mensaje"));
 				System.out.println(rs.getInt(1));
+				imprimeLogSp(res.getMensaje());
 				
 			}else {
 				System.out.println("Ningun dato");
@@ -340,7 +342,15 @@ public class DaoImpSqlServer implements Dao {
 		}			
 		
 	}
-	
+
+	public void imprimeLogSp(String mensajes) {
+		String[] mensaje = mensajes.split(";");
+		
+		for (String element : mensaje) {
+			System.out.println(element);
+			
+		}
+	}
 	
 
 }

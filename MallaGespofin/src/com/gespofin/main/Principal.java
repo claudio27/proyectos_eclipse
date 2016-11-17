@@ -25,7 +25,7 @@ public class Principal {
 	 * @param args
 	 *
 	 */
-	public static void main(String[] args) {
+	public static void main2(String[] args) {
 		
 		Dao obj = new DaoImpSqlServer();
 		ResultadoSpGespofin res = null;
@@ -106,6 +106,11 @@ public class Principal {
 		
 
 
+	}
+	
+	public static void main(String[] args) {
+		Dao obj = new DaoImpSqlServer();
+		obj.actualizaCif();
 	}
 	
 	
