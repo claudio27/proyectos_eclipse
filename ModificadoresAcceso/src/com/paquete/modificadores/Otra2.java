@@ -7,4 +7,8 @@ public class Otra2 {
 	void metodo1() {
 		p.getDefaultMessage();
 	}
+	
+	void metodo2() {
+		p.getDefaultMessage();
+	}
 }
