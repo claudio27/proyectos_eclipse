@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.hibernate.Session;
 import org.hibernate.tutorial.domain.Event;
+import org.hibernate.tutorial.domain.Person;
 import org.hibernate.tutorial.util.HibernateUtil;
 
 public class EventManager {
@@ -13,7 +14,7 @@ public class EventManager {
         EventManager mgr = new EventManager();
 
         if (args[0].equals("store")) {
-            mgr.createAndStoreEvent("Mi Evento", new Date());
+            mgr.createAndStoreEvent("Nuevo evento 1", new Date());
         }else if (args[0].equals("list")) {
             List events = mgr.listEvents();
             for (int i = 0; i < events.size(); i++) {
@@ -45,6 +46,18 @@ public class EventManager {
         List result = session.createQuery("from Event").list();
         session.getTransaction().commit();
         return result;
+    }
+    
+    
+    private void addPersonToEvent(Long personId, Long eventId) {
+        Session session = HibernateUtil.getSessionFactory().getCurrentSession();
+        session.beginTransaction();
+
+        Person aPerson = (Person) session.load(Person.class, personId);
+        Event anEvent = (Event) session.load(Event.class, eventId);
+        aPerson.getEvents().add(anEvent);
+
+        session.getTransaction().commit();
     }
 
 }
