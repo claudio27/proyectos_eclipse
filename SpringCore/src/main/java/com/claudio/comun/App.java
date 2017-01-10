@@ -15,8 +15,8 @@ public class App {
 		HelloWorld obj = (HelloWorld) context.getBean("helloBean");
 		obj.printHello();
 		
-		
-		//Metodo 1 loosely coupled
+//		Loosely coupled
+		//Metodo 1 
     	IOutputGenerator output = new CsvOutputGenerator();
     	output.generateOutput();
     	
