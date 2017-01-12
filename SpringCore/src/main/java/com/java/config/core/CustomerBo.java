@@ -1,5 +1,6 @@
 package com.java.config.core;
 
+// Bo : Bussines Object
 public class CustomerBo {
 
 	public void printMsg(String msg) {
