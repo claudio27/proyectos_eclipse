@@ -7,4 +7,8 @@
 		<property name="name" value="Claudio" />
 	</bean>
 
+<!-- Separar archivos en varios modulos o categorias -->
+<!-- En Spring 3, la funcionalidad equivalente es @import -->
+<!-- 	<import resource="config/customer.xml"/>
+        <import resource="config/scheduler.xml"/> -->
 </beans>

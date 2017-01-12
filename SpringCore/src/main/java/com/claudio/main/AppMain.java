@@ -1,21 +1,26 @@
-package com.claudio.comun;
+package com.claudio.main;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.claudio.comun.HelloWorld;
 import com.claudio.loosely.coupled.IOutputGenerator;
 import com.claudio.loosely.coupled.OutputHelper;
 import com.claudio.loosely.coupled.impl.CsvOutputGenerator;
 import com.java.config.AppConfig;
 import com.java.config.HolaMundo;
+import com.java.config.core.CustomerBo;
+import com.java.config.core.SchedulerBo;
+import com.java.config.importacion.AppConfigImportExample;
 
-public class App {
+public class AppMain {
 	public static void main(String[] args) {
 
-		llamadaDebilmenteAcoplado();
+//		llamadaDebilmenteAcoplado();
 //		llamadaConfiguracionDesdeJava();
-    	    	
+    	callJavaConfigImportExample();    	
+		
     	
 	}
 	
@@ -57,6 +62,16 @@ public class App {
 
 	}
 		
-	
+	public static void callJavaConfigImportExample() {
+		
+		ApplicationContext context = new AnnotationConfigApplicationContext(
+				AppConfigImportExample.class);
+		
+		CustomerBo customer = (CustomerBo) context.getBean("customer");
+		customer.printMsg("Hello 1 ");
+		
+		SchedulerBo scheduler = (SchedulerBo) context.getBean("scheduler");
+		scheduler.printMsg("Hello 2 ");
+	}
 	
 }
