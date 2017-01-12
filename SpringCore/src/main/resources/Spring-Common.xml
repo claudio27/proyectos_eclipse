@@ -5,10 +5,15 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<bean id="OutputHelper" class="com.claudio.loosely.coupled.OutputHelper">
-		<property name="outputGenerator" ref="JsonOutputGenerator" />
+		<!-- Puede ser por constructor o por setter, setter la preferida -->
+		<!-- <property name="outputGenerator" ref="JsonOutputGenerator" /> -->
+		<constructor-arg>
+			<bean class="com.claudio.loosely.coupled.impl.XmlOutPutGenerator" />
+		</constructor-arg>
 	</bean>
 
 	<bean id="CsvOutputGenerator" class="com.claudio.loosely.coupled.impl.CsvOutputGenerator" />
 	<bean id="JsonOutputGenerator" class="com.claudio.loosely.coupled.impl.JsonOutputGenerator" />
+	<bean id="XmlOutPutGenerator" class="com.claudio.loosely.coupled.impl.XmlOutPutGenerator" />
 
 </beans>

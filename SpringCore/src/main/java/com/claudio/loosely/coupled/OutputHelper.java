@@ -1,14 +1,13 @@
 package com.claudio.loosely.coupled;
 
-import com.claudio.loosely.coupled.impl.CsvOutputGenerator;
-
 public class OutputHelper {
 	
 	IOutputGenerator outputGenerator;
 // Se borra el constructor para que se encargue Spring de
 //	instanciar
-	public OutputHelper(){
-		outputGenerator = new CsvOutputGenerator();
+	public OutputHelper(IOutputGenerator outputGenerator){
+//		outputGenerator = new CsvOutputGenerator();
+		this.outputGenerator = outputGenerator;
 	}
 
 	public void generateOutput(){
