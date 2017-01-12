@@ -48,16 +48,7 @@ public class AppMain {
 		// Spring
 		ApplicationContext context2 =
 				new ClassPathXmlApplicationContext("Spring-Common.xml");
-//		Cannot create inner bean 'com.claudio.loosely.coupled.impl.XmlOutputGenerator#888e6c' 
-//		of type [com.claudio.loosely.coupled.impl.XmlOutputGenerator] while setting constructor 
-//		argument; nested exception 
-//		is org.springframework.beans.factory.CannotLoadBeanClassException: 
-//			Error loading class [com.claudio.loosely.coupled.impl.XmlOutputGenerator] for bean 
-//			with name 'com.claudio.loosely.coupled.impl.XmlOutputGenerator#888e6c' defined in 
-//			class path resource [Spring-Common.xml]: problem with class file or dependent class; 
-//			nested exception is java.lang.NoClassDefFoundError: 
-//				com/claudio/loosely/coupled/impl/XmlOutputGenerator (wrong name:
-//					com/claudio/loosely/coupled/impl/XmlOutPutGenerator)
+
 		
 		OutputHelper outputHelperSpring = (OutputHelper)context2.getBean("OutputHelper");
 		outputHelperSpring.generateOutput();
