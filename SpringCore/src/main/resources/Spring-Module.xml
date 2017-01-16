@@ -4,7 +4,7 @@
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 	<bean id="helloBean" class="com.claudio.comun.HelloWorld">
-		<property name="name" value="Claudio" />
+		 <property name="name" value="Claudio" /> 
 	</bean>
 
 <!-- Separar archivos en varios modulos o categorias -->

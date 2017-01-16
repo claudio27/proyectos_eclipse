@@ -5,6 +5,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.claudio.comun.HelloWorld;
+import com.claudio.contexto.Contexto;
 import com.claudio.loosely.coupled.IOutputGenerator;
 import com.claudio.loosely.coupled.OutputHelper;
 import com.claudio.loosely.coupled.impl.CsvOutputGenerator;
@@ -17,9 +18,14 @@ import com.java.config.importacion.AppConfigImportExample;
 public class AppMain {
 	public static void main(String[] args) {
 
-		llamadaDebilmenteAcoplado();
+//		llamadaDebilmenteAcoplado();
 //		llamadaConfiguracionDesdeJava();
 //    	callJavaConfigImportExample();    	
+		
+		AppMain app = new AppMain();
+		app.testMethod();
+		app.testMethod2();
+		app.testMethod();
 		
     	
 	}
@@ -31,6 +37,7 @@ public class AppMain {
 		
 		HelloWorld obj = (HelloWorld) context.getBean("helloBean");
 		obj.printHello();
+		obj.setEdad(10);
 		
 		
 //		Loosely coupled
@@ -73,6 +80,28 @@ public class AppMain {
 		
 		SchedulerBo scheduler = (SchedulerBo) context.getBean("scheduler");
 		scheduler.printMsg("Hello 2 ");
+	}
+	
+	public void testMethod() {
+	
+		
+		HelloWorld obj = (HelloWorld) Contexto.getBean("helloBean");
+		
+		obj.setName("Ana");
+		System.out.println(obj);
+		
+		
+	}
+	
+	public void testMethod2() {
+
+		HelloWorld obj = (HelloWorld) Contexto.getBean("helloBean");
+
+		obj.setName("nuevo metodo 2");
+		obj.setEdad(14);
+		System.out.println(obj);
+
+
 	}
 	
 }
